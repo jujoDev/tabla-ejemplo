@@ -28,6 +28,7 @@ export default function App() {
           </tr>
         </thead>
         <tbody>
+          {data.length === 0 && <tr><td colSpan={3}>No hay items que mostrar</td></tr>}
           {data.map((item, index) => (
             <tr
               key={index}
@@ -42,31 +43,27 @@ export default function App() {
       </table>
       <div className="custom-pagination">
         <button
-          className="pagination-button"
           onClick={goToFirstPage}
-          disabled={currentPage === 1}
+          disabled={currentPage === 1 || data.length === 0} 
         >
           Ir al principio
         </button>
         <button
-          className="pagination-button"
           onClick={prevPage}
-          disabled={currentPage === 1}
+          disabled={currentPage === 1 || data.length === 0}
         >
           Página anterior
         </button>
         <span className="page-text">Página actual: {currentPage}</span>
         <button
-          className="pagination-button"
           onClick={nextPage}
-          disabled={currentPage === 10}
+          disabled={currentPage === 10 || data.length === 0}
         >
           Página siguiente
         </button>
         <button
-          className="pagination-button"
           onClick={goToLastPage}
-          disabled={currentPage === 10}
+          disabled={currentPage === 10 || data.length === 0}
         >
           Ir al final
         </button>
