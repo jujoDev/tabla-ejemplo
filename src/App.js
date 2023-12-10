@@ -14,7 +14,7 @@ export default function App() {
   } = usePagination();
 
   if (loading) {
-    return <div>Cargando...</div>;
+    return <div class="loader"/>;
   }
 
   return (
