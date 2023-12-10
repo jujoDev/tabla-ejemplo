@@ -5,7 +5,7 @@ export const usePagination = (initialPage = 1) => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const fetchData = async (pageNumber) => {
+  const fetchData = async () => {
     try {
       const response = await fetch(
         `https://api.punkapi.com/v2/beers?page=${currentPage}&per_page=10`
