@@ -1,6 +1,6 @@
 import React from 'react';
 import Table from './components/Table';
-import './App.css';
+import './style.css';
 
 export default function App() {
   return (
