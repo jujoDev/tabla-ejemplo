@@ -1,27 +1,14 @@
 import { useState, useEffect } from 'react';
+import { getData } from '../services/getData';
 
 export const usePagination = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const fetchData = async () => {
-    try {
-      const response = await fetch(
-        `https://api.punkapi.com/v2/beers?page=${currentPage}&per_page=10`
-      );
-      const result = await response.json();
-      setData(result);
-    } catch (error) {
-      console.error('Error fetching data:', error);
-    } finally {
-      setLoading(false);
-    }
-  };
-
   useEffect(() => {
     setLoading(true);
-    fetchData(currentPage);
+    getData({currentPage, setData, setLoading});
   }, [currentPage]);
 
   const nextPage = () => {

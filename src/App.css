@@ -1,26 +1,19 @@
 .custom-table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 20px;
   font-family: 'Roboto', sans-serif;
-  background-color: #363636;
-  color: #fff;
-}
-
-.page-text {
-  font-family: 'Roboto', sans-serif;
-  margin: 0px 10px 0px 10px;
+  color: white;
 }
 
 .custom-table th,
 .custom-table td {
-  border: 1px solid #555;
-  padding: 12px;
+  border: 1px solid grey;
+  padding: 10px;
   text-align: left;
 }
 
 .custom-table th {
-  background-color: #212121;
+  background-color: #141414;
 }
 
 .even-row {
@@ -28,7 +21,7 @@
 }
 
 .odd-row {
-  background-color: #363636;
+  background-color: #3c3c3c;
 }
 
 .custom-pagination {
@@ -58,9 +51,9 @@
   cursor: not-allowed;
 }
 
-.page-info {
-  font-size: 16px;
-  color: #888;
+.page-text {
+  font-family: 'Roboto', sans-serif;
+  margin: 0px 10px 0px 10px;
 }
 
 .loader {
