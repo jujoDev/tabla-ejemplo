@@ -1,3 +1,6 @@
+body{
+  background-color: #141414;
+}
 .custom-table {
   width: 100%;
   border-collapse: collapse;
@@ -54,11 +57,12 @@
 .page-text {
   font-family: 'Roboto', sans-serif;
   margin: 0px 10px 0px 10px;
+  color: white;
 }
 
 .loader {
   border: 16px solid #f3f3f3; 
-  border-top: 16px solid #141414; 
+  border-top: 16px solid #6b6b6b; 
   border-radius: 50%;
   width: 120px;
   height: 120px;

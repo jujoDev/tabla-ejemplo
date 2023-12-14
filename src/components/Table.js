@@ -41,7 +41,14 @@ export default function Table () {
             ))}
             </tbody>
         </table>
-        <TableControls data={data} currentPage={currentPage} goToFirstPage={goToFirstPage} goToLastPage={goToLastPage} nextPage={nextPage} prevPage={prevPage}/>
+        <TableControls 
+            data={data} 
+            currentPage={currentPage} 
+            goToFirstPage={goToFirstPage} 
+            goToLastPage={goToLastPage} 
+            nextPage={nextPage} 
+            prevPage={prevPage}
+        />
     </>
     );
 }
